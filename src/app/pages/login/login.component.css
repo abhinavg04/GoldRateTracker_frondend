@@ -1,0 +1,9 @@
+*{
+    color: rgb(255,215,0);;
+}
+.card{
+    background-color:rgb(155, 46, 55);
+}
+.card-body form a{
+    color: rgb(255,215,0);
+}

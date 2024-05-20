@@ -1,0 +1,22 @@
+<form [formGroup]="goldForm" (ngSubmit)="calculateGoldPrice()">
+    <div class="form-group row my-2">
+      <label for="staticEmail" class="col-sm-2 col-form-label">PURITY</label>
+      <div class="col-sm-10">
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="22k/916">
+      </div>
+    </div>
+    <div class="form-group row my-2">
+      <label for="inputData" class="col-sm-2 col-form-label">Weight in g</label>
+      <div class="col-sm-10">
+        <input type="number"  formControlName="weight"  class="form-control" id="inputData" placeholder="Enter the weight">
+      </div>
+    </div>
+    <div class="form-group row my-2">
+      <label for="inputmaking" class="col-sm-2 col-form-label">Making charge in %</label>
+      <div class="col-sm-10">
+        <input type="number"  formControlName="makingCharge"  class="form-control" id="inputmaking" placeholder="Enter the making charge">
+      </div>
+    </div>
+    <p class="fw-bold">Result: {{result}}</p>
+    <button type="submit" class="btn btn-success">Calculate</button>
+  </form>

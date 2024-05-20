@@ -1,0 +1,25 @@
+<section class="container my-2">
+    <h2 class="py-2">Historical Data for AKGSMA</h2>
+    <form class="row" [formGroup]="dateForm" (ngSubmit)="onSubmit()">
+      <label for="date" class="col-1 col-form-label">Start Date</label>
+      <div class="col-5">
+        <div class="input-group date" id="datepicker">
+          <input type="date" formControlName="startDate" class="form-control" id="date"/>
+        </div>
+      </div>
+      <label for="dateend" class="col-1 col-form-label">End Date</label>
+      <div class="col-5">
+        <div class="input-group date" id="datepicker">
+          <input type="date" formControlName="endDate" class="form-control" id="dateend"/>
+        </div>
+      </div>
+      <div class="my-3">
+        <button type="submit" class="btn btn-success px-5">Show</button>
+      </div>
+    </form>
+    <div class="row">
+        <div class="col-md-6">
+            <canvas id="linechart"></canvas>
+        </div>
+    </div>
+  </section>

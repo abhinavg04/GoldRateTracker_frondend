@@ -1,0 +1,18 @@
+nav{
+    background-color: rgb(155, 46, 55);
+}
+.navbar-brand{
+    color: #ffcc00 ;
+}
+.nav-item a{
+    color: rgb(255,215,0);
+}
+#dropdownBasic1{
+    color:  rgb(255,215,0);
+}
+.dropdiv{
+    background-color: rgb(155, 46, 55);
+}
+.dropdiv a:hover{
+    background-color: black;
+}

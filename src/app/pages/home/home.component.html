@@ -1,0 +1,46 @@
+    <div class="container">
+        <table class="table table-striped my-4">
+            <thead>
+              <tr>
+                <th scope="col">Organization</th>
+                <th scope="col">22K/g</th>
+                <th scope="col">24k/g</th>
+                <th scope="col">22k 1 pavan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">AKGSMA</th>
+                <td>{{currentRate22k.akgsma}}</td>
+                <td>{{currentRate24k.akgsma}}</td>
+                <td>{{currentRate22kPavan.akgsma}}</td>
+              </tr>
+              <tr>
+                <th scope="row">KJF</th>
+                <td>{{currentRate22k.kjf}}</td>
+                <td>{{currentRate24k.kjf}}</td>
+                <td>{{currentRate22kPavan.kjf}}</td>
+              </tr>
+              <tr>
+                <th scope="row">S_BHAVAN</th>
+                <td>{{currentRate22k.s_bhavan}}</td>
+                <td>{{currentRate24k.s_bhavan}}</td>
+                <td>{{currentRate22kPavan.s_bhavan}}</td>
+              </tr>
+              <tr>
+                <th scope="row">THRICHUR</th>
+                <td>{{currentRate22k.thrichur}}</td>
+                <td>{{currentRate24k.thrichur}}</td>
+                <td>{{currentRate22kPavan.thrichur}}</td>
+              </tr>
+              <tr>
+                <th scope="row">KGSDA</th>
+                <td>{{currentRate22k.kgsda}}</td>
+                <td>{{currentRate24k.kgsda}}</td>
+                <td>{{currentRate22kPavan.kgsda}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="fw-bold">Change for AKGSMA 22k gold : {{currentRate22k.change}}</p>
+          <app-calculator [akgsmaRate]="akgsma_rate" class="p-4"></app-calculator>
+    </div>
