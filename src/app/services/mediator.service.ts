@@ -9,7 +9,7 @@ export class MediatorService {
   storeGoldPrice(data:number){
     return this.http.post(`http://127.0.0.1:8000/store-data/`,{price:data})
   }
-  loginUser(data:{username:string,password:string}){
+  loginUser(data:{username:string | null,password:string | null}){
     return this.http.post<UserInterface>(`http://127.0.0.1:8000/api-user-login/`,data)
   }
   registerUser(data:any){

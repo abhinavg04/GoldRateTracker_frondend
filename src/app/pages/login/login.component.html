@@ -16,15 +16,20 @@
               </div>
   
               <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
-  
               <div class="form-outline">
                 <input type="text" id="form2Example17" formControlName="username" class="form-control" placeholder="Enter username"/>
                 <label class="form-label" for="form2Example17">Username</label>
+                <small *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched">
+                  *Username is required
+                </small>
               </div>
   
               <div class="form-outline mb-4">
                 <input type="password" id="form2Example27" formControlName="password" class="form-control" placeholder="Enter password" />
                 <label class="form-label" for="form2Example27">Password</label>
+                <small *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+                  *password is required
+                </small>
               </div>
   
               <div>

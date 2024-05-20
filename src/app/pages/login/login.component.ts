@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { MediatorService } from 'src/app/services/mediator.service';
@@ -12,8 +12,8 @@ import { MediatorService } from 'src/app/services/mediator.service';
 })
 export class LoginComponent {
   loginForm = new FormGroup({
-    username:new FormControl(),
-    password: new FormControl(),
+    username:new FormControl('',[Validators.required]),
+    password: new FormControl('',[Validators.required]),
   })
   s = inject(MediatorService)
   route = inject(Router)
@@ -27,7 +27,7 @@ export class LoginComponent {
       this.token = `Token ${res.token}` 
       localStorage.setItem('token',this.token)
       this.authService.currentUsersig.set(res) 
-      this.route.navigateByUrl('/reg')
+      this.route.navigateByUrl('/home')
     })
   }
 }

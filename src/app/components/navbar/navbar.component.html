@@ -20,7 +20,7 @@
             <li *ngIf="authService.currentUsersig()" class="nav-item">
               <a class="btn nav-link" routerLink="/" (click)="logout()">Logout</a>
             </li>
-            <li class="nav-item" *ngIf="!authService.currentUsersig()" >
+            <li class="nav-item" *ngIf="authService.currentUsersig() == null" >
               <div ngbDropdown class="d-inline-block">
                 <a type="button" class="btn nav-link" id="dropdownBasic1" ngbDropdownToggle>
                   User
